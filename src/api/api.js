@@ -18,6 +18,7 @@ const useFetchProducts = (url) => {
                 }
 
                 const data = await res.json()
+                console.log(data)
                 setProducts(data.products || data)
             } catch (error) {
                 if(error.name !== 'AbortError'){
