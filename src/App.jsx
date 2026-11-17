@@ -1,7 +1,16 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { ProductProvider } from "./context/provider.jsx"
+
 function App() {
 
   return (
-    <h1>Hello React !</h1>
+    <BrowserRouter>
+     <ProductProvider>
+      <Routes>
+        
+      </Routes>
+     </ProductProvider>
+    </BrowserRouter>
   )
 }
 
