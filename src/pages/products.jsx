@@ -2,12 +2,20 @@ import { useEffect } from "react";
 import { useProductContext } from "../context/provider.jsx";
 
 const Products = () => {
-    const {state, dispatch} = useProductContext()
+    const {state, dispatch, loading, error} = useProductContext()
 
     useEffect(() => {
         console.log(state.allProducts)
     }, [])
 
+    if(loading){
+        return <p>loading products...</p>
+    }
+
+    if(error){
+        return <p>{error}</p>
+    }
+    
     return(
         <>
           {

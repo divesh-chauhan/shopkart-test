@@ -7,7 +7,7 @@ import { initState, reducerHandler } from "./reducer.js";
 const ProductContext = createContext()
 
 const ProductProvider = ({ children }) => {
-    const products = useFetchProducts('https://dummyjson.com/products')
+    const {products, loading, error} = useFetchProducts('https://dummyjson.com/products')
     const [state, dispatch] = useReducer(reducerHandler, initState)
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const ProductProvider = ({ children }) => {
     }, [products])
 
     return(
-        <ProductContext.Provider value={{ state, dispatch }}>
+        <ProductContext.Provider value={{ state, dispatch, loading, error }}>
             { children }
         </ProductContext.Provider>
     )
