@@ -4,7 +4,7 @@ const ProductsCom = () => {
     const {state, dispatch} = useProductContext()
     
     return(
-        <>
+        <div className="product-container">
            {
                 state.filtered.length > 0 
                 ? (
@@ -23,7 +23,7 @@ const ProductsCom = () => {
                 <p>No products found ⚠</p>
                 )
             }
-        </>
+        </div>
     )
 }
 
