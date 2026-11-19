@@ -19,7 +19,7 @@ const Products = () => {
 
     return(
         <>
-          <ProductsCom state={state} dispatch={dispatch}/>
+          <ProductsCom/>
         </>
     )
 }
