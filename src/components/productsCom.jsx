@@ -1,5 +1,6 @@
 import { useProductContext } from "../context/provider.jsx"
 import titleFix from "../utils/titleFix.js"
+import ProductDetailsBtn from "./buttons/productDetailsBtn.jsx"
 
 const ProductsCom = () => {
     const {state, dispatch} = useProductContext()
@@ -17,6 +18,7 @@ const ProductsCom = () => {
                             < img src={product.thumbnail} alt={product.thumbnail}/>
                             </div>
                             <p>Price : {product.price}</p>
+                            <ProductDetailsBtn id={product.id}/>
                         </div>
                     ))
                 ) : 
