@@ -11,7 +11,7 @@ function App() {
         <Route path='/' element={<Products />}/>
       </Routes>
      </ProductProvider>
-    </BrowserRouter>
+    </BrowserRouter> 
   )
 }
 
