@@ -1,4 +1,8 @@
-const ProductsCom = (state, dispatch) => {
+import { useProductContext } from "../context/provider.jsx"
+
+const ProductsCom = () => {
+    const {state, dispatch} = useProductContext()
+    
     return(
         <>
            {
