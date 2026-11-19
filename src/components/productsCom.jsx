@@ -1,4 +1,5 @@
 import { useProductContext } from "../context/provider.jsx"
+import titleFix from "../utils/titleFix.js"
 
 const ProductsCom = () => {
     const {state, dispatch} = useProductContext()
@@ -11,7 +12,7 @@ const ProductsCom = () => {
                     state.filtered.map(product => (
                         <div className="product" key={product.id}>
                             <p>Category {product.category}</p>
-                            <h2>{product.title}</h2>
+                            <h2>{titleFix(product.title)}</h2>
                             <div className="product-image">
                             < img src={product.thumbnail} alt={product.thumbnail}/>
                             </div>
