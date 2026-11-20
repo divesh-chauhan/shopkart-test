@@ -1,5 +1,5 @@
 const bigDescription = (text) => {
-    return text.length > 85 ? text.slice(0, 85) + '...' : text
+    return text.length > 150 ? text.slice(0, 150) + '...' : text
 }
 
 
