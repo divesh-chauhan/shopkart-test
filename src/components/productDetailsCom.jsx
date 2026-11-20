@@ -1,3 +1,5 @@
+import { bigDescription } from "../utils/descriptionFix.js"
+
 const ProductDetailsCom = ({ product, dispatch }) => {
     return(
         <>
@@ -15,7 +17,7 @@ const ProductDetailsCom = ({ product, dispatch }) => {
                     <p>Price : {product.price}</p>
                     <p>Rating : {product.rating}</p>
                     <p>Discount : {product.discountPercentage}%</p>
-                    <p>Description : {product.description}</p>
+                    <p>Description : {bigDescription(product.description)}</p>
                     <p>Stock : {product.stock}</p>
                     <p>Availability: {product.availabilityStatus}</p>
                     <p>Shipping Information : {product.shippingInformation}</p>
