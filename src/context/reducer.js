@@ -16,6 +16,8 @@ const reducerHandler = (state, action) => {
             }
         case 'SEARCH':
            return applyFilter({...state, search : action.title})
+        case 'FILTER':
+            return applyFilter({...state, category : action.category})
         default :
          return state
     }
@@ -28,6 +30,13 @@ const applyFilter = (state) => {
         result = result.filter(
             item => item.title.toLowerCase()
             .includes(state.search.toLowerCase())
+        )
+    }
+
+    if(state.category !== 'All'){
+        result = result.filter(
+            item => item.category.toLowerCase() === 
+            state.category.toLowerCase()
         )
     }
 
