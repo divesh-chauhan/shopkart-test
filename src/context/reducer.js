@@ -28,26 +28,6 @@ const reducerHandler = (state, action) => {
                 ...state,
                 filtered : [...state.filtered].sort((a, b) => b.price - a.price)
             }
-        case 'ADD_TO_CART':
-            const existing = state.cart.find(item => 
-                Number(item.id) === Number(action.product.id)
-            )
-
-            if(existing){
-                return {
-                    ...state,
-                    cart : state.cart.map(item => 
-                        Number(item.id) === Number(action.product.id)
-                        ? {...item, quantity : item.quantity + 1}
-                        : item
-                    )
-                }
-            }else{
-                return{
-                    ...state,
-                    cart : [{...action.product, quantity : 1}, ...state.cart]
-                }
-            }
         default :
          return state
     }
