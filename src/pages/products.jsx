@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useProductContext } from "../context/provider.jsx";
 import ProductsCom from "../components/productsCom.jsx";
+import NavigationBarCom from "../components/navigationBarCom.jsx";
 
 const Products = () => {
     const {state, dispatch, loading, error} = useProductContext()
@@ -19,6 +20,7 @@ const Products = () => {
 
     return(
         <>
+          <NavigationBarCom state={state} dispatch={dispatch} />
           <ProductsCom/>
         </>
     )
