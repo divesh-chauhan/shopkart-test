@@ -17,6 +17,21 @@ const NavigationBarCom = ({ state, dispatch }) => {
                 <option value="groceries">groceries</option>
             </select>
           </section>
+          <section className="sort-section">
+            <select onChange={(e) => {
+                if(e.target.value === 'low-price'){
+                    dispatch({ type : 'LOW-PRICE' })
+                } else if(e.target.value === 'high-price'){
+                    dispatch({ type : 'HIGH-PRICE' })
+                }else{
+                    dispatch({ type : 'SET_PRODUCTS', payload : state.allProducts })
+                }
+            }}>
+                <option value="">Default</option>
+                <option value="low-price">Low Price</option>
+                <option value="high-price">High Price</option>
+            </select>
+          </section>
         </>
     )
 }
