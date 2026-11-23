@@ -2,6 +2,7 @@ import { useProductContext } from "../context/provider.jsx"
 import titleFix from "../utils/titleFix.js"
 import { smallDescription } from "../utils/descriptionFix.js"
 import ProductDetailsBtn from "./buttons/productDetailsBtn.jsx"
+import AddToCartBtn from "./buttons/addToCartBtn.jsx"
 
 const ProductsCom = () => {
     const {state, dispatch} = useProductContext()
@@ -22,6 +23,7 @@ const ProductsCom = () => {
                             <p>Discount : {product.discountPercentage}%</p>
                             <p>Description : {smallDescription(product.description)}</p>
                             <ProductDetailsBtn id={product.id}/>
+                            <AddToCartBtn product={product} dispatch={dispatch}/>
                         </div>
                     ))
                 ) : 
