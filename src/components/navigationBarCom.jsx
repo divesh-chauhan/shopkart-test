@@ -32,6 +32,17 @@ const NavigationBarCom = ({ state, dispatch }) => {
                 <option value="high-price">High Price</option>
             </select>
           </section>
+          <section className="cart-count">
+            <p>🛒 
+              <span>
+                {
+                  state.cart.length > 0 
+                  ? state.cart.length 
+                  : 0
+                }
+              </span>
+            </p>
+          </section>
         </>
     )
 }
