@@ -8,4 +8,6 @@ const removeCartBtn = () => {
 
 
 
-export default removeCartBtn
+export {
+    removeCartBtn
+}
