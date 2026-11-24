@@ -1,4 +1,4 @@
-const removeCartBtn = () => {
+const RemoveCartBtn = () => {
     return(
         <>
           <button>🗑</button>
@@ -9,5 +9,5 @@ const removeCartBtn = () => {
 
 
 export {
-    removeCartBtn
+    RemoveCartBtn
 }
