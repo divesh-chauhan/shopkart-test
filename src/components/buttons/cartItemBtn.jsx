@@ -1,7 +1,7 @@
-const RemoveCartBtn = () => {
+const RemoveCartBtn = ({ id, dispatch }) => {
     return(
         <>
-          <button>🗑</button>
+          <button onClick={() => dispatch({ type:'REMOVE_FROM_CART', id })}>🗑</button>
         </>
     )
 }
