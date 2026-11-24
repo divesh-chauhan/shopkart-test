@@ -48,6 +48,11 @@ const reducerHandler = (state, action) => {
                     cart : [{...action.product, quantity : 1}, ...state.cart]
                 }
             }
+        case 'REMOVE_FROM_CART':
+            return{
+                ...state,
+                cart : state.cart.filter(item => Number(item.id) !== Number(action.id))
+            }
         default :
          return state
     }
