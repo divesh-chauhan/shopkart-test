@@ -22,7 +22,7 @@ const CartCom = () => {
                     <p>Price {item.price}</p>
                     <p>Description : {smallDescription(item.description)}</p>
                     <div className="cart-item-cta">
-                        <RemoveCartBtn dispatch={dispatch}/>
+                        <RemoveCartBtn id={item.id} dispatch={dispatch}/>
                     </div>
                 </div>
             ))
