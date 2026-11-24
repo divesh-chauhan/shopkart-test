@@ -1,4 +1,5 @@
 import { bigDescription } from "../utils/descriptionFix.js"
+import AddToCartBtn from "./buttons/addToCartBtn.jsx"
 
 const ProductDetailsCom = ({ product, dispatch }) => {
     return(
@@ -25,6 +26,7 @@ const ProductDetailsCom = ({ product, dispatch }) => {
                     <p>Return Policy : {product.returnPolicy}</p>
                     <p>Warranty Information : {product.warrantyInformation}</p>
                     <p>Weight : {product.weight}</p>
+                    <AddToCartBtn product={product} dispatch={dispatch}/>
                 </div>
             }
           </div>

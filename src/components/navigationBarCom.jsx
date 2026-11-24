@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const NavigationBarCom = ({ state, dispatch }) => {
     return(
         <>
@@ -33,15 +35,17 @@ const NavigationBarCom = ({ state, dispatch }) => {
             </select>
           </section>
           <section className="cart-count">
-            <p>🛒 
-              <span>
-                {
-                  state.cart.length > 0 
-                  ? state.cart.length 
-                  : 0
-                }
-              </span>
-            </p>
+            <Link to='/products/cart'>
+              <p>🛒 
+                <span>
+                  {
+                    state.cart.length > 0 
+                    ? state.cart.length 
+                    : 0
+                  }
+                </span>
+              </p>
+            </Link>
           </section>
         </>
     )

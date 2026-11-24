@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import { ProductProvider } from "./context/provider.jsx"
 import Products from "./pages/products.jsx"
 import ProductDetails from "./pages/productDetails.jsx"
+import Cart from "./pages/cart.jsx"
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Products />}/>
         <Route path='/products/:id/details' element={<ProductDetails />}/>
+        <Route path='/products/cart' element={<Cart />} />
       </Routes>
      </ProductProvider>
     </BrowserRouter> 
