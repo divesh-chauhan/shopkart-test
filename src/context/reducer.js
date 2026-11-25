@@ -62,6 +62,15 @@ const reducerHandler = (state, action) => {
                     : item
                 )
             }
+        case 'DECREASE_QUANTITY':
+            return{
+                ...state,
+                cart : state.cart.map(item => 
+                    Number(item.id) === Number(action.id)
+                    ? {...item, quantity : Math.max(1, item.quantity - 1)}
+                    : item
+                )
+            }
         default :
          return state
     }
