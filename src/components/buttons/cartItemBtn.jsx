@@ -14,8 +14,17 @@ const IncreaseQuantityBtn = ({ id, dispatch }) => {
     )
 }
 
+const DecreaseQuantityBtn = ({ id, dispatch }) => {
+    return(
+        <>
+          <button onClick={() => dispatch({ type : 'DECREASE_QUANTITY', id })} >-</button>
+        </>
+    )
+}
+
 
 export {
     RemoveCartBtn,
-    IncreaseQuantityBtn
+    IncreaseQuantityBtn,
+    DecreaseQuantityBtn
 }
