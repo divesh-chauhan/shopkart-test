@@ -20,6 +20,7 @@ const CartCom = () => {
                         <img src={item.thumbnail} alt={item.thumbnail} />
                     </div>
                     <p>Price {item.price}</p>
+                    <p>Quantity {item.quantity}</p>
                     <p>Description : {smallDescription(item.description)}</p>
                     <div className="cart-item-cta">
                         <DecreaseQuantityBtn id={item.id} dispatch={dispatch}/>
