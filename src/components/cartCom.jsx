@@ -1,6 +1,6 @@
 import { useProductContext } from "../context/provider.jsx";
 import { smallDescription } from "../utils/descriptionFix.js";
-import { RemoveCartBtn } from "./buttons/cartItemBtn.jsx";
+import { RemoveCartBtn, IncreaseQuantityBtn } from "./buttons/cartItemBtn.jsx";
 
 const CartCom = () => {
     const {state, dispatch} = useProductContext()
@@ -22,6 +22,7 @@ const CartCom = () => {
                     <p>Price {item.price}</p>
                     <p>Description : {smallDescription(item.description)}</p>
                     <div className="cart-item-cta">
+                        <IncreaseQuantityBtn id={item.id} dispatch={dispatch}/>
                         <RemoveCartBtn id={item.id} dispatch={dispatch}/>
                     </div>
                 </div>
