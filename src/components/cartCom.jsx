@@ -1,6 +1,7 @@
 import { useProductContext } from "../context/provider.jsx";
 import { smallDescription } from "../utils/descriptionFix.js";
 import { RemoveCartBtn, IncreaseQuantityBtn, DecreaseQuantityBtn } from "./buttons/cartItemBtn.jsx";
+import CheckoutBtn from "./buttons/checkoutBtn.jsx";
 
 const CartCom = () => {
     const {state, dispatch} = useProductContext()
@@ -30,6 +31,8 @@ const CartCom = () => {
                 </div>
             ))
          }
+
+         <CheckoutBtn />
         </>
     )
 }
