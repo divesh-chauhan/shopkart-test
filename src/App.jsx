@@ -4,6 +4,7 @@ import Products from "./pages/products.jsx"
 import ProductDetails from "./pages/productDetails.jsx"
 import Cart from "./pages/cart.jsx"
 import Checkout from "./pages/checkout.jsx"
+import Order from "./pages/order.jsx"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/products/:id/details' element={<ProductDetails />}/>
         <Route path='/products/cart' element={<Cart />} />
         <Route path='/products/checkout' element={<Checkout />}/>
+        <Route path='/products/order' element={<Order />}/>
       </Routes>
      </ProductProvider>
     </BrowserRouter> 
