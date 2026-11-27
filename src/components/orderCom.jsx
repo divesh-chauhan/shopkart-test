@@ -1,3 +1,5 @@
+import { ContinueShoppingBtn, ViewOrderBtn } from "./buttons/orderBtn"
+
 const OrderCom = () => {
     return(
         <>
@@ -8,6 +10,11 @@ const OrderCom = () => {
 
             <p>we've sent a confirmation to your email</p>
             <p>your order will be delivered in <span>3-4</span>days.</p>
+
+            <div className="order-cta">
+                <ContinueShoppingBtn/>
+                <ViewOrderBtn/>
+            </div>
         </>
     )
 }
