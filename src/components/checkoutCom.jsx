@@ -1,3 +1,5 @@
+import { ProceedToPaymentBtn } from "./buttons/paymentBtn.jsx"
+
 const CheckoutCom = ({ state, dispatch }) => {
     let cart = state.cart || []
 
@@ -63,6 +65,7 @@ const CheckoutCom = ({ state, dispatch }) => {
             <p>Total Price {totalPrice}</p>
             </section>
           </div>
+          <ProceedToPaymentBtn />
         </>
     )
 }
